@@ -1,0 +1,4 @@
+---
+# defaults file for package-installer
+# defaults/main.yml
+package_name: vim

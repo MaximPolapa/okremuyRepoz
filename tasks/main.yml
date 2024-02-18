@@ -1,0 +1,14 @@
+---
+# tasks file for package-installer
+# tasks/main.yml
+- name: Install a package with apt
+  ansible.builtin.apt:
+    name: "{{ package_name }}"
+    state: present
+  when: ansible_os_family == "Debian"
+
+- name: Install a package with yum
+  ansible.builtin.yum:
+    name: "{{ package_name }}"
+    state: present
+  when: ansible_os_family == "RedHat"
